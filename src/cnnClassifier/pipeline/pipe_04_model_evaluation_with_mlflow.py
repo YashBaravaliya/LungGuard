@@ -1,6 +1,11 @@
+import os
 from cnnClassifier.config.configuration import ConfigurationManager
 from cnnClassifier.components.model_evalution import Evaluation
 from cnnClassifier import logger
+
+os.environ["MLFLOW_TRACKING_URI"]="https://dagshub.com/YashBaravaliya/LungGuard.mlflow"
+os.environ["MLFLOW_TRACKING_USERNAME"]="YashBaravaliya"
+os.environ["MLFLOW_TRACKING_PASSWORD"]="dccbf6bb1455433d1334e5707014fe7da9d06553"
 
 STAGE_NAME = "MODEL EVALUATION"
 
