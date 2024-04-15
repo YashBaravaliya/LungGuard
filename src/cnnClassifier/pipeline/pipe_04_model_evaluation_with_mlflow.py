@@ -13,7 +13,9 @@ class ModelEvaluationPipeline:
         eval_config = config.get_evaluation_config()
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
+        evaluation.log_into_mlflow()
         evaluation.save_score()
+
 
 if __name__ == '__main__':
     try:

@@ -162,3 +162,4 @@ cython_debug/
 
 template.py
 artifacts/
+mlruns/
