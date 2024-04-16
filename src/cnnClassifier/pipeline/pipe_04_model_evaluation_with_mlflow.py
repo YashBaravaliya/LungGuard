@@ -14,12 +14,14 @@ class ModelEvaluationPipeline:
         pass
 
     def main(self):
+        logger.info(f"Running stage: {STAGE_NAME}")
         config = ConfigurationManager()
         eval_config = config.get_evaluation_config()
         evaluation = Evaluation(eval_config)
         evaluation.evaluation()
         evaluation.log_into_mlflow()
         evaluation.save_score()
+        logger.info(f"Completed stage: {STAGE_NAME}")
 
 
 if __name__ == '__main__':
